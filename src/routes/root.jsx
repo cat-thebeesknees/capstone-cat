@@ -39,13 +39,13 @@ export default function Root() {
           <nav>
             <ul>
               <li>
-                <Link to={`/guest/all-products}`}>Guest</Link>
+                <Link to="/guest/all-products">Guest</Link>
               </li>
               <li>
-                <Link to={`/login/profile`}>Login</Link>
+                <Link to="/login">Login</Link>
               </li>
               <li>
-                <Link to={`/register/profile`}>Register</Link>
+                <Link to="/register">Register</Link>
               </li>
             </ul>
           </nav>

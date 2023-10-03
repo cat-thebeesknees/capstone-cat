@@ -19,22 +19,22 @@ const router = createBrowserRouter([
     // loader:rootLoader,
     children: [
       {
-        path: "/guest",
+        path: "guest",
         element: <Guest />,
         children: [
           {
-            path: "/guest/all-products",
+            path: "all-products",
             element: <AllProducts />,
             // loader: productLoader,
           },
         ],
       },
       {
-        path: "routes/login",
+        path: "login",
         element: <LoginUser />,
       },
       {
-        path: "routes/register",
+        path: "register",
         element: <Register />,
       },
     ],
