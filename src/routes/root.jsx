@@ -1,21 +1,12 @@
 import {
      Link,
       Outlet,
-      useLoaderData,
-      NavLink,
+      
     } from "react-router-dom";
-import { fetchAllProducts } from "../API";
 
-
-export async function loader() {
-    const products = await fetchAllProducts();
-    return { products };
-        
-}
-
-
+ 
 export default function Root() {
-    const { products } = useLoaderData();   
+      
       
     
     return (
@@ -48,13 +39,13 @@ export default function Root() {
           <nav>
             <ul>
               <li>
-                <NavLink to={`products/${products}`}>Guest</NavLink>
+                <Link to={`/guest/all-products}`}>Guest</Link>
               </li>
               <li>
                 <Link to={`/login/profile`}>Login</Link>
               </li>
               <li>
-                <Link to={`/register/profile`}>Guest</Link>
+                <Link to={`/register/profile`}>Register</Link>
               </li>
             </ul>
           </nav>

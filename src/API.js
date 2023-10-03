@@ -2,10 +2,7 @@
 export const APIURL = "https://fakestoreapi.com/products";
 
 //Fetch All Products
-export async function loader({ params }) {
-  const products = await fetchAllProducts(params.productId);
-  return { products };
-}
+
 export async function fetchAllProducts() {
   try {
     const response = await fetch(APIURL);
@@ -24,11 +21,12 @@ export async function fetchAllProducts() {
 
 export async function fetchSingleProduct() {
   try {
-    const response = await fetch("https://fakestoreapi.com/products/1");
+    const response = await fetch('https://fakestoreapi.com/products/1');
     const result = await response.json();
     const product = result;
     console.log(product);
     return product;
+    
   } catch (error) {
     console.error(error);
     throw error;
@@ -38,15 +36,15 @@ export async function fetchSingleProduct() {
 // Login user
 export async function loginUser() {
   try {
-    const response = await fetch("https://fakestoreapi.com/auth/login", {
+    const response = await fetch('https://fakestoreapi.com/auth/login',{
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
         user: {
-          username: "",
-          password: "",
+          username: '',
+          password: ''
         },
       }),
     });
@@ -61,10 +59,10 @@ export async function loginUser() {
 //Get all users
 export const usersAll = {
   all: () => {
-    return fetch("https://fakestoreapi.com/users")
+    return fetch('https://fakestoreapi.com/users')
       .then((response) => {
         if (!response.ok) {
-          throw new Error("Failed to fetch users");
+          throw new Error('Failed to fetch users');
         }
         return response.json();
       })
