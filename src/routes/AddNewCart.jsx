@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import "../CSS/Cart.css";
 
 const AddNewCart = () => {
   return (

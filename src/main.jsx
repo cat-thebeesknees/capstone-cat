@@ -11,6 +11,7 @@ import Register from "./routes/Register";
 // import AllProducts, {loader as productLoader,
 // } from "./routes/AllProducts";
 import AllProducts from "./routes/AllProducts";
+import SingleProductCard from "./routes/SingleProductCard";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -26,7 +27,14 @@ const router = createBrowserRouter([
             path: "all-products",
             element: <AllProducts />,
             // loader: productLoader,
+            children: [
+              {
+                path: "single-product-card",
+                element: <SingleProductCard />,
+              },
+            ]
           },
+
         ],
       },
       {

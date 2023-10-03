@@ -2,7 +2,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import AddNewCart from "./AddNewCart";
-
+import "../CSS/SingleProductCard.css";
 function SingleProductCard({ selectedProduct }) {
   const navigate = useNavigate();
 
@@ -12,7 +12,7 @@ function SingleProductCard({ selectedProduct }) {
 
   const handleReturnToProducts = () => {
     // Navigate back to the all products
-    navigate("/all-products");
+    navigate("all-products");
   };
   return (
     <div className="product-container">

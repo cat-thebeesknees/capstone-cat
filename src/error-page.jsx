@@ -1,5 +1,5 @@
 import { useRouteError } from "react-router-dom";
-
+import "./CSS/NoMatch.css";
 export default function ErrorPage() {
   const error = useRouteError();
   console.error(error);
@@ -67,7 +67,7 @@ export default function ErrorPage() {
         </defs>
       </svg>
 
-      <h2>Page Not Found</h2>
+      <h2 id="error">Page Not Found</h2>
       <p>
         <i>{error.statusText || error.message}</i>
       </p>
