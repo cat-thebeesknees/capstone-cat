@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 
+
 //Get products in a specific category
 //You can also use limit(Number) and sort(asc|desc) as a query string to get your ideal results
 export default function GetInCategory({ products, setProducts }) {
@@ -41,6 +42,7 @@ export default function GetInCategory({ products, setProducts }) {
           ))}
         </select>
       </div>
+      
     </div>
   );
 }

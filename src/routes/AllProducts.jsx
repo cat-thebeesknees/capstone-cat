@@ -1,7 +1,7 @@
 //AllProducts.jsx
 import { useEffect, useState } from "react";
 import SingleProductCard from "./SingleProductCard";
- import { useNavigate, Outlet, Link } from "react-router-dom";
+ import { useNavigate, Link } from "react-router-dom";
 import GetInCategory from "./GetInCategory";
 
 
@@ -32,7 +32,7 @@ export default function AllProducts() {
         console.error("Error fetching product details:", error)
       );
 
-    navigate("/single-product-card");
+    navigate("products/:productId");
   };
 
   return (
@@ -45,14 +45,14 @@ export default function AllProducts() {
             <h2>{product.title}</h2>
             <p>Price: ${product.price}</p>
             <img src={product.image} alt={product.title} />
-            <Link to="/guest/all-products/single-product-card/">View Product</Link>
+            <Link to="/single-product-card/">View Product</Link>
           </li>
           
         ))}
       </ul>
       <SingleProductCard selectedProduct={selectedProduct} />
 
-      <Outlet />
+      
     </div>
   );
 }

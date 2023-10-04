@@ -83,6 +83,7 @@ function SingleProductCard({ selectedProduct }) {
       </Link>
 
       <AddNewCart />
+      
     </div>
   );
 }
