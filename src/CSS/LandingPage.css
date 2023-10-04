@@ -7,11 +7,6 @@ div.title-landing {
   white-space:nowrap;
 }
 
-div:first-of-type {    
-  animation: showup 7s;
-}
-
-
 
 @keyframes showup {
     0% {opacity:0;}

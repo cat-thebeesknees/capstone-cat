@@ -32,7 +32,7 @@ export default function AllProducts() {
         console.error("Error fetching product details:", error)
       );
 
-    navigate("single-product-card");
+    navigate("/single-product-card");
   };
 
   return (
@@ -45,7 +45,7 @@ export default function AllProducts() {
             <h2>{product.title}</h2>
             <p>Price: ${product.price}</p>
             <img src={product.image} alt={product.title} />
-            <Link to="single-product-card/">View Product</Link>
+            <Link to="/guest/all-products/single-product-card/">View Product</Link>
           </li>
           
         ))}
