@@ -2,6 +2,7 @@ import { Link, Outlet, Form } from "react-router-dom";
 
 import "../CSS/LandingPage.css";
 
+
 export default function Root() {
   return (
     <>
@@ -38,6 +39,8 @@ export default function Root() {
         </nav>
       </div>
       <div id="detail">
+            <h1>Welcome</h1>
+            
       <Outlet />
       </div>
       

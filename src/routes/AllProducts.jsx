@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import SingleProductCard from "./SingleProductCard";
  import { useNavigate, Link } from "react-router-dom";
 import GetInCategory from "./GetInCategory";
+import DetailsButton from "./Buttons";
 
 
 
@@ -32,7 +33,7 @@ export default function AllProducts() {
         console.error("Error fetching product details:", error)
       );
 
-    navigate("products/:productId");
+      navigate(<SingleProductCard />);
   };
 
   return (
@@ -45,12 +46,14 @@ export default function AllProducts() {
             <h2>{product.title}</h2>
             <p>Price: ${product.price}</p>
             <img src={product.image} alt={product.title} />
-            <Link to="/single-product-card/">View Product</Link>
+            <Link to={product.id}>View Product</Link>
+            <DetailsButton />
           </li>
           
         ))}
       </ul>
       <SingleProductCard selectedProduct={selectedProduct} />
+      
 
       
     </div>

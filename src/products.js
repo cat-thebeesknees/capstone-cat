@@ -5,7 +5,7 @@ import sortBy from "sort-by";
 export const APIURL="https://fakestoreapi.com/products";
 
 export async function getProducts(query) {
-  await APIURL(`getProducts:${query}`);
+  await fakeNetwork(`getProducts:${query}`);
   let products = await localforage.getItem("products");
   if (!products) products = [];
   if (query) {
@@ -73,3 +73,4 @@ async function fakeNetwork(key) {
     setTimeout(res, Math.random() * 800);
   });
 }
+set();

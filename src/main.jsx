@@ -12,6 +12,7 @@ import Register from "./routes/Register";
 // } from "./routes/AllProducts";
 import AllProducts from "./routes/AllProducts";
 import SingleProductCard from "./routes/SingleProductCard";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -32,9 +33,12 @@ const router = createBrowserRouter([
                 path: "single-product-card",
                 element: <SingleProductCard />,
               },
-            ]
+              {
+                path: ":id",
+                element: <SingleProductCard />,
+              },
+            ],
           },
-
         ],
       },
       {
